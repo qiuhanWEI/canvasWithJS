@@ -17,6 +17,7 @@ function startDraw() {
         y: 400,
         r: 50
     });
+
     var rec = new Rectangle({
         x: 150,
         y: 150,
@@ -24,20 +25,35 @@ function startDraw() {
         height: 200
     });
 
-    painter.addShape(rec);
-    //painter.addShape(circle);
-    //painter.addShape(circle2);
+    //r:小圆半径；R: 大圆半径；x,y：中心坐标点；rot：旋转角度；
+    var star = new Star({
+        r: 50,
+        R: 100,
+        x: 250,
+        y: 250,
+        rot: 0,
+	    borderWidth: 1,
+	    fillStyle: "#333"
+    });
 
-    var change = false;
-    setInterval(function(){
-        if(change) {
-            painter.removeShape(circle);
-            painter.addShape(circle2);
-        } else {
-            painter.removeShape(circle2);
-            painter.addShape(circle);
-        }
-        change = !change;
-        
+    var line = new Line({
+        x: 100,
+        y: 500,
+        len: 400,
+        rot: 0,
+	    borderWidth: 1
+    });
+
+    painter.addShape(rec);
+    painter.addShape(star);
+    painter.addShape(line);
+    painter.addShape(circle2);
+
+    setTimeout(function(){
+	    painter.addShape(circle);
     }, 1000);
+
+    setTimeout(function(){
+        painter.removeShape(circle);
+    }, 3000);
 }
