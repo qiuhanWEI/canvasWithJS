@@ -25,10 +25,19 @@ function startDraw() {
     });
 
     painter.addShape(rec);
-    painter.addShape(circle);
-    painter.addShape(circle2);
+    //painter.addShape(circle);
+    //painter.addShape(circle2);
 
-    setTimeout(function(){
-        painter.removeShape(circle);
+    var change = false;
+    setInterval(function(){
+        if(change) {
+            painter.removeShape(circle);
+            painter.addShape(circle2);
+        } else {
+            painter.removeShape(circle2);
+            painter.addShape(circle);
+        }
+        change = !change;
+        
     }, 1000);
 }
