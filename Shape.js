@@ -20,6 +20,8 @@ function Rectangle(params) {
 	}
 }
 //a
+
+//b
 function Star(params) {
 	this.r = params.r;
 	this.R = params.R;
