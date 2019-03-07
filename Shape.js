@@ -19,7 +19,7 @@ function Rectangle(params) {
 		context.strokeRect(this.x, this.y, this.width, this.height);
 	}
 }
-
+//a
 function Star(params) {
 	this.r = params.r;
 	this.R = params.R;
