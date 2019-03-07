@@ -56,4 +56,8 @@ function startDraw() {
     setTimeout(function(){
         painter.removeShape(circle);
     }, 3000);
+
+    // change1
+    // change2
+    // change3
 }
