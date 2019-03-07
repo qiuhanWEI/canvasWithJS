@@ -22,6 +22,8 @@ function Rectangle(params) {
 //a
 
 //b
+
+//c
 function Star(params) {
 	this.r = params.r;
 	this.R = params.R;
